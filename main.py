@@ -25,8 +25,8 @@ def search_users(day1: list, day2: list) -> set:
         # Both days
         if row in day1:
             users_id.add(row[0])
-        # Only second day
-        elif row not in day1:
+        else:
+            # Only second day
             users_id.add(row[0])
     return users_id
 
@@ -48,4 +48,3 @@ if __name__ == '__main__':
     start_time = time.time()
     main()
     print(f'Duration: {time.time() - start_time}')
-
